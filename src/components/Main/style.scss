@@ -1,0 +1,56 @@
+@import '../../styles/main.scss';
+
+main {
+  text-align: center;
+}
+
+.section__hero {
+  position: relative;
+  height: 370px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../../images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    min-width: 375px;
+    height: 423px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../../images/image-mockups-mobile.png');
+    background-repeat: no-repeat;
+    min-width: 375px;
+    height: 423px;
+    background-position: top center;
+    background-size: contain;
+  }
+}
+
+.section__details,
+.section__info {
+    padding: 0 1.5rem;
+}
+
+.section__info {
+  background: $light-grayish-blue;
+}
+
+.section__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  color: $grayish-blue;
+}

@@ -1,0 +1,17 @@
+@import '../../styles/main.scss';
+
+.footer {
+  background: $dark-blue;
+
+  &__logo {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(216deg) brightness(110%) contrast(101%);
+  }
+
+  &__link {
+    color: $very-light-gray;
+  }
+
+  &__copyright {
+    color: $grayish-blue;
+  }
+}
