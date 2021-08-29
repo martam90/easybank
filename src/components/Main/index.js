@@ -25,7 +25,7 @@ const Main = () => {
           <div>
           {sectionIcons.map((item) => (
             <div className="section__item" key={item.id}>
-              <img src={item.icon} alt={item.alt}></img>
+              <img className="section__icons" src={item.icon} alt={item.alt}></img>
               <h3>{item.heading}</h3>
               <p className="text">{item.text}</p>
             </div>
@@ -37,11 +37,11 @@ const Main = () => {
           <h2>Latest articles</h2>
           {articleItems.map((item) => (
             <div className="section__articles--item" key={item.id}>
-            <img src={item.image} alt={item.alt}></img>
+            <img className="section__articles--image" src={item.image} alt={item.alt}></img>
             <div className="section__articles--text">
-              <span>{item.author}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+              <span className="section__articles--author">{item.author}</span>
+              <h4>{item.title}</h4>
+              <p className="text text--left">{item.text}</p>
             </div>
           </div>
           ))}

@@ -20,15 +20,15 @@ header {
 
   &__list {
     position: absolute;
-    top: 0;
+    top: calc(69px - 30px);
     left: 0;
     background: #fff;
-    transform: translate(5%, 12%);
+    transform: translateX(0%);
     z-index: 9999;
-    padding: 3rem;
+    padding: 2rem;
     font-size: 1.3rem;
     border-radius: 5px;
-    width: 80vw;
+    width: 100%;
   }
 
   &__item {

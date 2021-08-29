@@ -1,17 +1,52 @@
 @import '../../styles/main.scss';
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8rem 0.9rem;
   background: $dark-blue;
 
   &__logo {
     filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(216deg) brightness(110%) contrast(101%);
   }
 
+  &__icons-list {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+    gap: 0.9rem;
+  }
+
+  &__list {
+    text-align: center;
+    padding-bottom: 1.7rem;
+  }
+
+  &__item {
+    padding-bottom: 0.8rem;
+  }
+
   &__link {
-    color: $very-light-gray;
+    color: $light-grayish-blue;
+    font-size: 0.9rem;
   }
 
   &__copyright {
     color: $grayish-blue;
+    font-size: 0.9rem;
+    padding-top: 1.25rem;
+  }
+}
+
+.attribution {
+  color: $grayish-blue;
+  font-size: 0.9rem; 
+  padding-top: 1rem;
+  text-align: center;
+
+  &__link {
+    color: $white;
   }
 }

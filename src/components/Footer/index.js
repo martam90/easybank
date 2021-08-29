@@ -33,8 +33,8 @@ const Footer = () => {
       <span className="footer__copyright">© Easybank. All Rights Reserved</span>
       
       <div className="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="https://github.com/martam90">Marta</a>.
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" className="attribution__link">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/martam90" className="attribution__link">Marta</a>.
       </div> 
     </footer>
   );
