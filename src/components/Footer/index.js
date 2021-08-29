@@ -7,6 +7,7 @@ import footerIcons from '../../assets/footerIcons';
 const Footer = () => {
   return (
     <footer className="footer">
+      <div className="footer__desktop--left">
       <a href="#">
         <img className="footer__logo" src={logo}></img>
       </a>
@@ -15,23 +16,26 @@ const Footer = () => {
       {footerIcons.map((item) => (
         <li className="footer__icons-item" key={item.id}>
           <a href="#" className="footer__icons-link">
-            <img src={item.source} alt={item.alt}></img>
+            <img className="footer__icon" src={item.source} alt={item.alt}></img>
           </a>
         </li>
       ))}
       </ul>
+      </div>
+    
+      <div className="footer__desktop--right">
+        <ul className="footer__list">
+          {footerMenu.map((item) => (
+            <li className="footer__item" key={item.id}>
+              <a className="footer__link" href="#">{item.name}</a>
+            </li>
+          ))}
+        </ul>
+        <a href="#" className="cta">Request Invite</a>
 
-      <ul className="footer__list">
-        {footerMenu.map((item) => (
-          <li className="footer__item" key={item.id}>
-            <a className="footer__link" href="#">{item.name}</a>
-          </li>
-        ))}
-      </ul>
-      <a href="#" className="cta">Request Invite</a>
+        <span className="footer__copyright">© Easybank. All Rights Reserved</span>
+      </div>
 
-      <span className="footer__copyright">© Easybank. All Rights Reserved</span>
-      
       <div className="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" className="attribution__link">Frontend Mentor</a>. 
         Coded by <a href="https://github.com/martam90" className="attribution__link">Marta</a>.

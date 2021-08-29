@@ -34,6 +34,7 @@ const Header = () => {
           ))}
         </ul>
       </nav>
+        <a className="cta cta--hidden cta--hidden-header" href="#">Request invite</a>
     </header>
   );
 };

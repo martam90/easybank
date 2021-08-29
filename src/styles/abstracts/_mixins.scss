@@ -1,0 +1,7 @@
+$medium: 37.5em; //600px;
+
+@mixin medium {
+  @media screen and(min-width: $medium) {
+    @content;
+  }
+}

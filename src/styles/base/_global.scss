@@ -15,6 +15,10 @@ h3 {
   text-align: center;
   font-weight: 300;
   color: $dark-blue;
+
+  @include medium {
+    text-align: left;
+  }
 }
 
 h1 {
@@ -51,4 +55,29 @@ h4 {
   font-size: 0.8rem;
   font-weight: 700;
   text-align: center;
+  cursor: pointer;
+
+  @include medium {
+    margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    transition: all ease-in-out 250ms;
+  }
+
+  &--hidden {
+    display: none;
+
+    @include medium {
+      display: block;
+      margin: 0;
+    }
+
+    @include medium {
+      &-header {
+        place-self: end;
+      }
+    }
+  }
 }

@@ -4,6 +4,10 @@
   position: relative;
   height: 370px;
 
+  @include medium {
+    grid-column: 2 / 3;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -49,6 +53,10 @@
   align-items: center;
   justify-content: center;
   padding: 1rem 0;
+
+  @include medium {
+    align-items: flex-start;
+  }
 }
 
 .text {
@@ -60,6 +68,10 @@
   &--left {
     text-align: left;
   }
+
+  @include medium {
+    text-align: left;
+  }
 }
 
 .section__articles {
@@ -67,6 +79,12 @@
 
   &--item {
     padding: 1.5rem 0;
+
+    @include medium {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
   }
 
   &--text {
@@ -76,10 +94,33 @@
 
   &--image {
     border-radius: 5px 5px 0 0;
+
+    @include medium {
+      flex: 1;
+    }
   }
 
   &--author {
     color: $grayish-blue;
     font-size: 0.8rem;
+  }
+}
+
+@include medium {
+  .section__wrapper--desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section__details {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 40ch;
+  }
+
+  .section__items--desktop-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.9rem;
   }
 }

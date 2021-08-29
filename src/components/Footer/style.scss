@@ -19,6 +19,16 @@
     gap: 0.9rem;
   }
 
+  @include medium {
+    .footer__icon {
+      &:hover {
+        filter: invert(60%) sepia(100%) saturate(352%) hue-rotate(83deg) brightness(94%) contrast(90%);
+        transition: all ease-in-out 250ms;
+        cursor: pointer;
+      }
+    }
+  }
+
   &__list {
     text-align: center;
     padding-bottom: 1.7rem;
@@ -31,6 +41,13 @@
   &__link {
     color: $light-grayish-blue;
     font-size: 0.9rem;
+
+    @include medium {
+      &:hover {
+        color: $lime-green;
+        transition: color ease-in-out 250ms;
+      }
+    }
   }
 
   &__copyright {
