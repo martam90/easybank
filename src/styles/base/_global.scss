@@ -29,11 +29,20 @@ h3 {
 h1 {
   font-size: 2.5rem;
   line-height: 3rem;
+
+  @include medium {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
 }
 
 h2 {
   font-size: 2rem;
   line-height: 36px;
+
+  @include medium {
+    font-size: 2.3rem;
+  }
 }
 
 h3 {
@@ -62,7 +71,7 @@ h4 {
   text-align: center;
   cursor: pointer;
 
-  @include medium {
+  @include medium{
     margin: 0;
   }
 
@@ -74,12 +83,12 @@ h4 {
   &--hidden {
     display: none;
 
-    @include medium {
+    @include medium-nav {
       display: block;
       margin: 0;
     }
 
-    @include medium {
+    @include medium-nav {
       &-header {
         place-self: end;
       }
@@ -87,8 +96,9 @@ h4 {
   }
 
   &__footer {
-    @include medium {
-      place-self: end;
+    @include medium-nav {
+      align-self: start;
+      justify-self: end;
     }
   }
 }

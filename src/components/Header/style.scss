@@ -3,9 +3,10 @@
 header {
   padding: 1.5rem;
 
-  @include medium {
+  @include medium-nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding: 1.5rem 2rem;
   }
 }
 
@@ -19,7 +20,7 @@ header {
   position: relative;
   visibility: hidden;
 
-  @include medium {
+  @include medium-nav {
     position: static;
     visibility: visible;
     display: flex;
@@ -42,7 +43,7 @@ header {
     border-radius: 5px;
     width: 100%;
 
-    @include medium {
+    @include medium-nav {
       display: flex;
       justify-content: center;
       gap: 1rem;
@@ -57,9 +58,9 @@ header {
   }
 
   &__item {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 
-    @include medium {
+    @include medium-nav {
       margin-bottom: 0;
     }
   }
@@ -69,7 +70,7 @@ header {
     text-align: center;
     color: $dark-blue;
 
-    @include medium { 
+    @include medium-nav { 
       color: $grayish-blue;
       font-size: 0.9rem;
       padding: 0.5rem;
@@ -121,7 +122,7 @@ header {
 }
 
 .nav__btn {
-  @include medium {
+  @include medium-nav {
     display: none;
   }
 }
