@@ -1,7 +1,22 @@
 $medium: 37.5em; //600px;
+$medium-nav: 48em; //768px;
+$large: 62.5em; // 1000px;
 
 @mixin medium {
   @media screen and(min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin medium-nav {
+  @media screen and(min-width: $medium-nav) {
+    @content;
+  }
+}
+
+
+@mixin large {
+  @media screen and(min-width: $large) {
     @content;
   }
 }
