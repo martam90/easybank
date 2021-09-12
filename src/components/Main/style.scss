@@ -2,10 +2,23 @@
 
 .section__hero {
   position: relative;
+  overflow: hidden;
   height: 370px;
+
+  &--image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    @include medium {
+      position: relative;
+      transform: translate(20%, -12%);
+    }
+  }
 
   @include medium {
     grid-column: 2 / 3;
+    overflow: unset;
   }
 
   &::before {
@@ -17,20 +30,19 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-  }
+    background-size: cover;
+    z-index: -1;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url('../../images/image-mockups-mobile.png');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    background-position: top center;
-    background-size: contain;
+    @include medium {
+      background: url('../../images/bg-intro-desktop.svg');
+      background-position: 10% 100%;
+      min-height: 50rem;
+    }
   }
+}
+
+.section_hero--image-wrapper {
+  overflow: hidden;
 }
 
 .section__details,
@@ -39,12 +51,30 @@
     padding: 3rem 1.5rem;
 }
 
+.section__details {
+  @include medium {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    min-height: 40rem;
+  }
+}
+
 .section__info {
   background: $light-grayish-blue;
+
+  @include medium {
+    padding-top: 8rem;
+  }
 }
 
 .section__icons {
   padding-bottom: 1rem;
+}
+
+.section__text--wrapper {
+  height: 100%;
 }
 
 .section__item {
@@ -55,12 +85,15 @@
   padding: 1rem 0;
 
   @include medium {
+    justify-content: stretch;
     align-items: flex-start;
+    padding: 0;
   }
 }
 
 .text {
   font-size: 1rem;
+  line-height: 1.8;
   padding: 0.8rem 0;
   color: $grayish-blue;
   text-align: center;
@@ -71,6 +104,8 @@
 
   @include medium {
     text-align: left;
+    max-width: 60ch;
+    padding: 1rem 0;
   }
 }
 
@@ -83,20 +118,32 @@
     @include medium {
       display: flex;
       flex-direction: column;
-      height: 100%;
     }
   }
 
   &--text {
     padding: 1.25rem;
     background: $white;
+    height: 100%;
   }
 
   &--image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 5px 5px 0 0;
 
-    @include medium {
-      flex: 1;
+    &-wrapper {
+      &-outer {
+        padding-bottom: 70%;
+        height: 0;
+        position: relative;
+      }
+  
+      &-inner {
+        position: absolute;
+        inset: 0;
+      }
     }
   }
 
@@ -120,7 +167,8 @@
 
   .section__items--desktop-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 0.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding-top: 2rem;
   }
 }

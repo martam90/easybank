@@ -9,6 +9,11 @@ body {
   outline: 2px dotted $dark-blue;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 h1, 
 h2, 
 h3 {
@@ -78,6 +83,12 @@ h4 {
       &-header {
         place-self: end;
       }
+    }
+  }
+
+  &__footer {
+    @include medium {
+      place-self: end;
     }
   }
 }

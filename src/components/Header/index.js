@@ -17,7 +17,7 @@ const Header = () => {
   }
 
   return (
-    <header>
+    <header className="container">
       <div className="header__top">
         <a href='#'><img src={logo} /></a>
         <button className={isOpen ? 'nav__btn--open' : 'nav__btn'} onClick={toggleMenu}>
