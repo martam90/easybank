@@ -59,7 +59,7 @@ const Main = () => {
                 </div>
                 <div className="section__articles--text">
                   <span className="section__articles--author">{item.author}</span>
-                  <h4>{item.title}</h4>
+                  <p className="section__articles--heading">{item.title}</p>
                   <p className="text text--left">{item.text}</p>
               </div>
             </a>
