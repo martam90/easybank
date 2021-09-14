@@ -132,6 +132,7 @@
   }
 
   &--item {
+    display: block;
     padding: 1.5rem 0;
 
     @include medium {

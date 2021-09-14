@@ -20,6 +20,10 @@ footer {
 
   &__logo {
     filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(216deg) brightness(110%) contrast(101%);
+
+  &--wrapper {
+    width: 139px;
+  }
   }
 
   &__icons-list {

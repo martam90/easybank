@@ -19,22 +19,22 @@ const Header = () => {
   return (
     <header className="container">
       <div className="header__top">
-        <a href='#'><img src={logo} /></a>
+        <a href='/'><img src={logo} aria-label="easybank logo"/></a>
         <button className={isOpen ? 'nav__btn--open' : 'nav__btn'} onClick={toggleMenu}>
-          <img className="nav__icon--open" src={hamburgerIcon}></img>
-          <img className="nav__icon--close" src={closeHamburgerIcon}></img>
+          <img className="nav__icon--open" src={hamburgerIcon} alt="hamburger menu opening icon"></img>
+          <img className="nav__icon--close" src={closeHamburgerIcon} alt="hamburger menu closing icon"></img>
         </button>
       </div>
       <nav className={isOpen ? 'nav nav--open' : 'nav'}>
         <ul className="nav__list">
         {menuItems.map((item) => (
           <li className="nav__item" key={item.id}>
-            <a className="nav__link">{item.name}</a>
+            <a href="/" className="nav__link">{item.name}</a>
           </li>
           ))}
         </ul>
       </nav>
-        <a className="cta cta--hidden cta--hidden-header" href="#">Request invite</a>
+        <a className="cta cta--hidden cta--hidden-header" href="/">Request invite</a>
     </header>
   );
 };

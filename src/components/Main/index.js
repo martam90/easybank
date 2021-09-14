@@ -20,7 +20,7 @@ const Main = () => {
           <p className="text">Take your financial life online. Your Easybank account will be a one-stop-shop 
               for spending, saving, budgeting, investing, and much more.
           </p>
-          <a className="cta" href="#">Request invite</a>
+          <a className="cta" href="/">Request invite</a>
         </section>
         </div>
 
@@ -36,10 +36,10 @@ const Main = () => {
                 <div className="section__image--wrapper">
                   <img className="section__icons" src={item.icon} alt={item.alt}></img>
                 </div>
-              <div className="section__text--wrapper">
-                <h3>{item.heading}</h3>
-                <p className="text">{item.text}</p>
-              </div>
+                <div className="section__text--wrapper">
+                  <h3>{item.heading}</h3>
+                  <p className="text">{item.text}</p>
+                </div>
               </div>
             ))}
             </div>
@@ -51,18 +51,18 @@ const Main = () => {
           <h2>Latest articles</h2>
           <div className="section__items--desktop-wrapper">
             {articleItems.map((item) => (
-              <div className="section__articles--item" key={item.id}>
-              <div className="section__articles--image-wrapper-outer">
-                <div className="section__articles--image-wrapper-inner">
-                  <img className="section__articles--image" src={item.image} alt={item.alt}></img>
+              <a href="/" className="section__articles--item" key={item.id}>
+                <div className="section__articles--image-wrapper-outer">
+                  <div className="section__articles--image-wrapper-inner">
+                    <img className="section__articles--image" src={item.image} alt={item.alt}></img>
+                  </div>
                 </div>
+                <div className="section__articles--text">
+                  <span className="section__articles--author">{item.author}</span>
+                  <h4>{item.title}</h4>
+                  <p className="text text--left">{item.text}</p>
               </div>
-              <div className="section__articles--text">
-                <span className="section__articles--author">{item.author}</span>
-                <h4>{item.title}</h4>
-                <p className="text text--left">{item.text}</p>
-              </div>
-            </div>
+            </a>
             ))}
           </div>
         </div>
