@@ -18,14 +18,26 @@ header {
 }
 
 .nav {
-  position: relative;
+  position: absolute;
+  top: 5.625rem;
+  right: 0;
+  left: 0;
+  height: 25rem;
+  width: 100%;
+  background: $overlay;
   visibility: hidden;
+
+  @include medium {
+    height: 42rem;
+  }
 
   @include medium-nav {
     position: static;
     visibility: visible;
     display: flex;
     align-items: center;
+    background: none;
+    height: inherit;
   }
 
   &--open {
@@ -35,14 +47,13 @@ header {
   &__list {
     position: absolute;
     top: calc(69px - 15px);
-    left: 0;
     background: #fff;
-    transform: translateX(0);
     z-index: 9999;
     padding: 2rem;
     font-size: 1.2rem;
     border-radius: 5px;
-    width: 100%;
+    width: 90%;
+    transform: translateX(5%);
 
     @include medium-nav {
       display: flex;
@@ -111,18 +122,18 @@ header {
   display: none;
 }
 
-
-.nav__btn--open {
-  .nav__icon--open {
-    display: none;
-  }
-
-  .nav__icon--close {
-    display: block;
-  }
-}
-
+.nav__btn--open,
 .nav__btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    width: 6.25rem;
+    border-radius: 9999px;
+    border: 1px solid $dark-blue;
+    font-size: 1rem;
+    color: $dark-blue;
+
   @include medium-nav {
     display: none;
   }
@@ -133,4 +144,14 @@ header {
     }
   }
   
+}
+
+.nav__btn--open {
+  .nav__icon--open {
+    display: none;
+  }
+
+  .nav__icon--close {
+    display: flex;
+  }
 }

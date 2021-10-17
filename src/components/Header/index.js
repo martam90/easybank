@@ -13,14 +13,14 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
+    setIsOpen(!isOpen);
   }
 
   return (
     <header className="container">
       <div className="header__top">
         <a href='/'><img src={logo} alt="easybank logo"/></a>
-        <button className={isOpen ? 'nav__btn--open' : 'nav__btn'} onClick={toggleMenu}>
+        <button className={isOpen ? 'nav__btn--open' : 'nav__btn'} onClick={toggleMenu}>Menu
           <img className="nav__icon--open" src={hamburgerIcon} alt="hamburger menu opening icon"></img>
           <img className="nav__icon--close" src={closeHamburgerIcon} alt="hamburger menu closing icon"></img>
         </button>
